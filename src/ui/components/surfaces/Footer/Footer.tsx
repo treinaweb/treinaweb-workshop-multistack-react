@@ -1,60 +1,16 @@
 import React from 'react';
 import {
-    FooterContainer,
+    FooterStyled,
     FooterTitle,
-    SocialButton,
     AppList,
-    FooterGrid,
-    SocialContainer,
+    FooterContainer,
 } from './Footer.style';
-import { List, ListItem, Typography, Box } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 
 const Footer: React.FC = () => {
     return (
-        <FooterContainer>
-            <FooterGrid>
-                <div>
-                    <FooterTitle>Menu</FooterTitle>
-                    <List>
-                        <ListItem disableGutters>
-                            <Typography
-                                component={'a'}
-                                href={'/'}
-                                color={'inherit'}
-                            >
-                                Encontrar uma diarista
-                            </Typography>
-                        </ListItem>
-                        <ListItem disableGutters>
-                            <Typography
-                                component={'a'}
-                                href={'/'}
-                                color={'inherit'}
-                            >
-                                Seja uma diarista
-                            </Typography>
-                        </ListItem>
-                        <ListItem disableGutters>
-                            <Typography
-                                component={'a'}
-                                href={'/'}
-                                color={'inherit'}
-                            >
-                                Por que usar o E-Diaristas?
-                            </Typography>
-                        </ListItem>
-                        <ListItem disableGutters>
-                            <Typography
-                                component={'a'}
-                                href={'/'}
-                                color={'inherit'}
-                            >
-                                Principais Dúvidas
-                            </Typography>
-                        </ListItem>
-                    </List>
-                </div>
-
+        <FooterStyled>
+            <FooterContainer>
                 <Box sx={{ maxWidth: '400px' }}>
                     <FooterTitle>Quem somos</FooterTitle>
                     <Typography variant={'body2'} sx={{ mt: 2 }}>
@@ -65,60 +21,37 @@ const Footer: React.FC = () => {
                     </Typography>
                 </Box>
 
-                <SocialContainer>
-                    <Box sx={{ maxWidth: '400px', flex: 1 }}>
-                        <FooterTitle>Baixe nossos aplicativos</FooterTitle>
-                        <AppList>
-                            <li>
-                                <a
-                                    href={'/'}
-                                    target={'_blank'}
-                                    rel={'noopener noreferrer'}
-                                >
-                                    <img
-                                        src={'/img/logos/app-store.png'}
-                                        alt={'AppStore'}
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={'/'}
-                                    target={'_blank'}
-                                    rel={'noopener noreferrer'}
-                                >
-                                    <img
-                                        src={'/img/logos/google-play.png'}
-                                        alt={'Google Play'}
-                                    />
-                                </a>
-                            </li>
-                        </AppList>
-                    </Box>
-
-                    <div>
-                        <FooterTitle>Redes Sociais</FooterTitle>
-                        <AppList>
-                            <li>
-                                <SocialButton href={'/'}>
-                                    <i className={'twf-facebook-f'} />
-                                </SocialButton>
-                            </li>
-                            <li>
-                                <SocialButton href={'/'}>
-                                    <i className={'twf-instagram'} />
-                                </SocialButton>
-                            </li>
-                            <li>
-                                <SocialButton href={'/'}>
-                                    <i className={'twf-youtube'} />
-                                </SocialButton>
-                            </li>
-                        </AppList>
-                    </div>
-                </SocialContainer>
-            </FooterGrid>
-        </FooterContainer>
+                <div>
+                    <FooterTitle>Baixe nossos aplicativos</FooterTitle>
+                    <AppList>
+                        <li>
+                            <a
+                                href={'/'}
+                                target={'_blank'}
+                                rel={'noopener noreferrer'}
+                            >
+                                <img
+                                    src={'/img/logos/app-store.png'}
+                                    alt={'AppStore'}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href={'/'}
+                                target={'_blank'}
+                                rel={'noopener noreferrer'}
+                            >
+                                <img
+                                    src={'/img/logos/google-play.png'}
+                                    alt={'Google Play'}
+                                />
+                            </a>
+                        </li>
+                    </AppList>
+                </div>
+            </FooterContainer>
+        </FooterStyled>
     );
 };
 

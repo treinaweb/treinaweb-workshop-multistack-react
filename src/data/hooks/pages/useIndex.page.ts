@@ -1,7 +1,7 @@
-import { UserShortInterface } from 'data/@types/UserInterface';
-import { ApiService } from 'data/services/ApiService';
-import { ValidationService } from 'data/services/ValidationService';
 import { useState, useMemo } from 'react';
+import { UserShortInterface } from 'data/@types/UserInterface';
+import { ValidationService } from 'data/services/ValidationService';
+import { ApiService } from 'data/services/ApiService';
 
 export default function useIndex() {
     const [cep, setCep] = useState(''),
@@ -17,16 +17,16 @@ export default function useIndex() {
     async function buscarProfissionais(cep: string) {
         setBuscaFeita(false);
         setCarregando(true);
+        setErro('');
+
         try {
-            setErro('');
             const { data } = await ApiService.get<{
                 diaristas: UserShortInterface[];
                 quantidade_diaristas: number;
             }>('/api/diaristas-cidade?cep=' + cep.replace(/\D/g, ''));
-
-            setBuscaFeita(true);
             setDiaristas(data.diaristas);
             setDiaristasRestantes(data.quantidade_diaristas);
+            setBuscaFeita(true);
             setCarregando(false);
         } catch (error) {
             setErro('CEP não encontrado');

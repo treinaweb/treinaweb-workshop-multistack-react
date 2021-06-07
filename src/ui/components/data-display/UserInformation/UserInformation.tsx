@@ -7,20 +7,25 @@ import {
     RatingStyled,
 } from './UserInformation.style';
 
-export interface UserInformationProps {
+interface UserInformationProps {
     picture: string;
     name: string;
     rating: number;
     description?: string;
 }
 
-const UserInformation: React.FC<UserInformationProps> = (props) => {
+const UserInformation: React.FC<UserInformationProps> = ({
+    name,
+    picture,
+    rating,
+    description,
+}) => {
     return (
         <UserInformationContainer>
-            <AvatarStyled src={props.picture}>{props.name[0]}</AvatarStyled>
-            <RatingStyled value={props.rating} readOnly />
-            <UserName>{props.name}</UserName>
-            <UserDescription>{props.description}</UserDescription>
+            <AvatarStyled src={picture}>{name[0]}</AvatarStyled>
+            <UserName>{name}</UserName>
+            <RatingStyled readOnly value={rating} />
+            <UserDescription>{description}</UserDescription>
         </UserInformationContainer>
     );
 };

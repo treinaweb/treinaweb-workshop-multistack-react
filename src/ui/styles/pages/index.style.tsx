@@ -6,8 +6,8 @@ export const FormElementsContainer = styled('div')`
     flex-direction: column;
     align-items: center;
     gap: ${({ theme }) => theme.spacing(5)};
-    margin: 0 auto ${({ theme }) => theme.spacing(7)};
     max-width: 650px;
+    margin: 0 auto ${({ theme }) => theme.spacing(7)};
 `;
 
 export const ProfissionaisPaper = styled(Paper)`
@@ -16,8 +16,8 @@ export const ProfissionaisPaper = styled(Paper)`
 
     ${({ theme }) => theme.breakpoints.down('md')} {
         &.MuiPaper-root {
-            box-shadow: none;
             padding: 0;
+            box-shadow: none;
         }
     }
 `;

@@ -1,19 +1,18 @@
-import React from 'react';
-import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import SafeEnvironment from 'ui/components/feedback/SafeEnvironment/SafeEnvironment';
-import TextFieldMask from 'ui/components/inputs/TextFieldMask/TextFieldMask';
+import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import UserInformation from 'ui/components/data-display/UserInformation/UserInformation';
+import TextFieldMask from 'ui/components/inputs/TextFieldMask/TextFieldMask';
 import {
     Button,
-    CircularProgress,
-    Container,
     Typography,
+    Container,
+    CircularProgress,
 } from '@material-ui/core';
 import {
     FormElementsContainer,
-    ProfissionaisContainer,
     ProfissionaisPaper,
-} from '@styles/pages/index.styled';
+    ProfissionaisContainer,
+} from 'ui/styles/pages/index.style';
 import useIndex from 'data/hooks/pages/useIndex.page';
 
 export default function Home() {
@@ -39,15 +38,15 @@ export default function Home() {
                 }
             />
 
-            <Container sx={{ mb: 10 }}>
+            <Container>
                 <FormElementsContainer>
                     <TextFieldMask
-                        label={'Digite seu CEP'}
                         mask={'99.999-999'}
+                        label={'Digite seu CEP'}
+                        fullWidth
                         variant={'outlined'}
                         value={cep}
                         onChange={(event) => setCep(event.target.value)}
-                        fullWidth
                     />
 
                     {erro && <Typography color={'error'}>{erro}</Typography>}
@@ -67,15 +66,17 @@ export default function Home() {
                     (diaristas.length > 0 ? (
                         <ProfissionaisPaper>
                             <ProfissionaisContainer>
-                                {diaristas.map((item, index) => (
-                                    <UserInformation
-                                        key={index}
-                                        name={item.nome_completo}
-                                        rating={item.reputacao}
-                                        description={item.cidade}
-                                        picture={item.foto_usuario}
-                                    />
-                                ))}
+                                {diaristas.map((item, index) => {
+                                    return (
+                                        <UserInformation
+                                            key={index}
+                                            name={item.nome_completo}
+                                            picture={item.foto_usuario}
+                                            rating={item.reputacao}
+                                            description={item.cidade}
+                                        />
+                                    );
+                                })}
                             </ProfissionaisContainer>
 
                             <Container sx={{ textAlign: 'center' }}>

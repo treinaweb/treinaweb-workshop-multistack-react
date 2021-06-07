@@ -1,13 +1,13 @@
 import React from 'react';
 import {
     FooterStyled,
+    FooterContainer,
     FooterTitle,
     AppList,
-    FooterContainer,
 } from './Footer.style';
 import { Typography, Box } from '@material-ui/core';
 
-const Footer: React.FC = () => {
+const Footer = () => {
     return (
         <FooterStyled>
             <FooterContainer>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                             >
                                 <img
                                     src={'/img/logos/app-store.png'}
-                                    alt={'AppStore'}
+                                    alt={'App Store'}
                                 />
                             </a>
                         </li>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
 import { SafeEnvironmentContainer } from './SafeEnvironment.style';
+import { Container } from '@material-ui/core';
 
-const SafeEnvironment: React.FC = () => {
+const SafeEnvironment = () => {
     return (
         <SafeEnvironmentContainer>
             <Container>
-                Ambiente 100% Seguro <i className={'twf-lock'} />
+                Ambiente Seguro <i className={'twf-lock'} />
             </Container>
         </SafeEnvironmentContainer>
     );

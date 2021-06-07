@@ -1,7 +1,7 @@
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Avatar, Box, Rating } from '@material-ui/core';
+import { Avatar, Rating } from '@material-ui/core';
 
-export const UserInformationContainer = styled(Box)`
+export const UserInformationContainer = styled('div')`
     display: grid;
     grid-template-columns: 60px 1fr;
     grid-template-rows: repeat(3, auto);
@@ -10,9 +10,9 @@ export const UserInformationContainer = styled(Box)`
         'avatar rating'
         'avatar description';
     background-color: ${({ theme }) => theme.palette.grey[50]};
+    padding: ${({ theme }) => theme.spacing(3)};
     gap: ${({ theme }) => theme.spacing(0.5) + ' ' + theme.spacing(2)};
     align-items: center;
-    padding: ${({ theme }) => theme.spacing(3)};
 `;
 
 export const UserName = styled('div')`
@@ -21,20 +21,21 @@ export const UserName = styled('div')`
     color: ${({ theme }) => theme.palette.text.primary};
     font-size: ${({ theme }) => theme.typography.body2.fontSize};
 `;
+
 export const UserDescription = styled('div')`
     grid-area: description;
     color: ${({ theme }) => theme.palette.text.secondary};
     font-size: ${({ theme }) => theme.typography.body2.fontSize};
 `;
+
 export const AvatarStyled = styled(Avatar)`
     grid-area: avatar;
     width: 100%;
     height: initial;
     aspect-ratio: 1;
 `;
+
 export const RatingStyled = styled(Rating)`
     grid-area: rating;
-    &.MuiRating-root {
-        font-size: 14px;
-    }
+    font-size: 14px;
 `;

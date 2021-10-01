@@ -1,5 +1,5 @@
-import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Avatar, Rating } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Avatar, Rating } from '@mui/material';
 
 export const UserInformationContainer = styled('div')`
     display: grid;

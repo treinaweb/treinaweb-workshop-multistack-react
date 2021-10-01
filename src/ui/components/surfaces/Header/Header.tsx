@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderAppBar, HeaderLogo } from './Header.style';
-import { Toolbar, Container } from '@material-ui/core';
+import { Toolbar, Container } from '@mui/material';
 
 const Header: React.FC = () => {
     return (

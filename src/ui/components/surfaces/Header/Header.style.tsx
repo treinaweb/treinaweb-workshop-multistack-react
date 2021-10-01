@@ -1,5 +1,5 @@
-import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { AppBar } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { AppBar } from '@mui/material';
 
 export const HeaderAppBar = styled(AppBar)`
     background-color: ${({ theme }) => theme.palette.background.paper};

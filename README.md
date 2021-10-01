@@ -7,3 +7,4 @@
 |                                                                                              | Branch | Descrição |
 | -------------------------------------------------------------------------------------------- | ------ | --------- |
 | [Download](https://github.com/treinaweb/treinaweb-workshop-multistack-react/archive/v01.zip) | v01    | Versão 01 |
+| [Download](https://github.com/treinaweb/treinaweb-workshop-multistack-react/archive/v02.zip) | v02    | Versão 02 |

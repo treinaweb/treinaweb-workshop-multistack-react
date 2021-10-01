@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material';
 import theme from 'ui/themes/theme';
 import Head from 'next/head';
 import Header from 'ui/components/surfaces/Header/Header';

@@ -5,7 +5,7 @@ import {
     FooterTitle,
     AppList,
 } from './Footer.style';
-import { Typography, Box } from '@material-ui/core';
+import { Typography, Box } from '@mui/material';
 
 const Footer = () => {
     return (
@@ -14,10 +14,11 @@ const Footer = () => {
                 <Box sx={{ maxWidth: '400px' }}>
                     <FooterTitle>Quem somos</FooterTitle>
                     <Typography variant={'body2'} sx={{ mt: 2 }}>
-                        E-Diaristas te ajuda a encontrar um profissional
+                        O e-diaristas te ajuda a encontrar um profissional
                         perfeito para realizar a limpeza da sua casa. Garantimos
-                        a melhor profissional com total segurança e praticidade!
-                        São milhares de clientes satisfeitos por todo o país.
+                        os melhores profissionais com total segurança e
+                        praticidade! São milhares de clientes satisfeitos por
+                        todo o país.
                     </Typography>
                 </Box>
 

@@ -1,5 +1,5 @@
-import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Container, Typography } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Container, Typography } from '@mui/material';
 
 export const FooterStyled = styled('footer')`
     background-color: ${({ theme }) => theme.palette.primary.main};
